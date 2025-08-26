@@ -16,7 +16,7 @@ Program využívá knihoven **NumPy**, **Sounddevice**, **Soundfile** a **Tkinte
 - Výstupem je již upravené audio přehrávané v reálném čase.
 
 ## Uživatelská část
-- Program se spustí otevřením hlavního souboru main.py, čímž se otevře grafické uživatelské prostředí v okně s názvem "Phase Vocoder".
+- Program se spustí otevřením hlavního souboru main.py, čímž se otevře grafické uživatelské rozhraní v okně s názvem "Phase Vocoder".
 - Nejprve si uživatel zvolí audio soubor, který chce otevřít.
 - V okně je dále několik řádků s ovládacími prvky a informacemi:
     1) Pomocí tlačítka "Select file" uživatel může změnit otevřený zvukový soubor. Vedle tohoto tlačítka se zobrazuje i název vybraného souboru.
@@ -44,7 +44,7 @@ Program využívá knihoven **NumPy**, **Sounddevice**, **Soundfile** a **Tkinte
     
 ### Použité algoritmy a datové struktury
 - Zvukové soubory se ukládají jako *numpy.array* s amplitudami v rozsahu [-1.0, 1.0].
-- Celé uživatelské prostředí je definováno jako strom, jehož kořen je root definovaný v **main.py**. Dětmi jsou následně jednotlivé grafické prvky (frame a widgety) jako například posuvníky, tlačítka a text. Pomocí metody *grid()* se definuje, kde a jak se mají v okně tyto prvky zobrazit. Některé interaktivní prvky jsou schopné volat jiné metody v *Application*, nebo z nich můžeme extrahovat hodnoty pomocí metody *get()*.
+- Celé uživatelské rozhraní je definováno jako strom, jehož kořen je root definovaný v **main.py**. Dětmi jsou následně jednotlivé grafické prvky (frame a widgety) jako například posuvníky, tlačítka a text. Pomocí metody *grid()* se definuje, kde a jak se mají v okně tyto prvky zobrazit. Některé interaktivní prvky jsou schopné volat jiné metody v *Application*, nebo z nich můžeme extrahovat hodnoty pomocí metody *get()*.
 - Nejdůležitější částí programu je samotný algoritmus **Phase Vocoder** s funkcí phase-locking:
     - Vstupní signál se v první fázi rozdělí na překrývající se bloky délky *window_len* s posunem *hop_a* mezi bloky.
     - Na každý blok je aplikována windowing funkce - blok se vynásobí seznamem hodnot, který způsobí, že amplitudy v krajích se zmenší, což zmírňuje defekty ve zvuku v krajních bodech.
