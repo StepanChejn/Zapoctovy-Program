@@ -4,7 +4,7 @@
 ## Úvod
 Tento projekt implementuje audio procesor založený na algoritmu **Phase Vocoder**.  
 Program umožňuje v reálném čase upravovat a přehrávat zvukové soubory pomocí time-stretchingu, pitch-shiftingu a smyček (looping).  
-Program využívá knihoven **NumPy**, **Sounddevice**, **Soundfile** a **Tkinter** pro grafické rozhraní.  
+Program využívá knihoven **NumPy**, **Sounddevice**, **Soundfile** a **Tkinter**.  
 
 ## Cíl projektu
 - Program má být schopen přehrávat audio soubory upravené pomocí algoritmu Phase Vocoder. Hlavní funkce programu jsou:
